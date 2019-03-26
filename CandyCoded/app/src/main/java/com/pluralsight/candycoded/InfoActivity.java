@@ -30,10 +30,10 @@ public class InfoActivity extends AppCompatActivity {
   // TODO - Task 2 - Launch the Google Maps Activity
   // ***
   public void createMapIntent(View view) {
-    Uri uri = Uri.parse("geo:0,0?q=618 E South Orlando, FL 32801");
-    Intent mapIntent = new Intent(Intent.ACTION_VIEW, uri);
+    Uri mapUri = Uri.parse("geo:0,0?q=618 E South St Orlando, FL 32801");
+    Intent mapIntent = new Intent(Intent.ACTION_VIEW, mapUri);
 
-    mapIntent.setPackage("com.google.android.apps.map");
+    mapIntent.setPackage("com.google.android.apps.maps");
     boolean isResolvable = Objects.nonNull(mapIntent.resolveActivity(getPackageManager()));
 
     if(isResolvable) {
